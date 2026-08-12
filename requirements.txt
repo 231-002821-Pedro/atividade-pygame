@@ -1,0 +1,2 @@
+pygame==2.6.1
+PyOpenGL==4.0.0a1
