@@ -1,2 +1,3 @@
 pygame==2.6.1
 PyOpenGL==4.0.0a1
+numpy==2.5.2
