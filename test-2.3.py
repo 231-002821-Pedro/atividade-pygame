@@ -53,8 +53,7 @@ class Test(Base):
 
     def update(self):
         glUseProgram(self.programRef)
-        glDrawArrays(GL_LINE_LOOP, 0, self.vertexCount)
+        glDrawArrays(GL_TRIANGLES, 0, self.vertexCount)
 
 
 # instancia esta classe e executa o programa
-Test().run()

@@ -7,13 +7,26 @@ ministrada pelo **Prof. Rodrigo Fernandes dos Santos**.
 
 Trata-se de um esqueleto de aplicação gráfica usando **Pygame** e **OpenGL**, com uma janela
 duplamente bufferizada (double buffer) e suavização de bordas (antialiasing). O projeto fornece uma
-estrutura básica (`core/base.py` e `core/input.py`) que é reaproveitada pelos exercícios/checkpoints
-da disciplina (como `test-2.1.py`).
+estrutura básica reaproveitada pelos exercícios/checkpoints da disciplina:
+
+- `core/base.py` e `core/input.py` — janela, loop principal e tratamento de eventos.
+- `core/openGLUtils.py` — compilação e link de shaders.
+- `core/attribute.py` — envia dados de vértice (posição, cor, etc.) para buffers da GPU.
+- `core/uniform.py` — envia variáveis uniform (globais) para o programa de shader.
+
+Exercícios/checkpoints:
+
+- `test-2.1.py` — janela básica.
+- `test-2.3.py` — desenha um hexágono usando `Attribute` e `GL_LINE_LOOP`.
 
 ## Requisitos
 
 - Python 3.13
 - Pygame 2.6.1
+- PyOpenGL 4.0.0a1
+- numpy
+
+Todas as dependências estão listadas em `requirements.txt`.
 
 ## Passo a passo: clonando e executando no PyCharm
 
@@ -46,7 +59,7 @@ ainda não tiver, instale antes de continuar:
    clique em **OK**.
 5. Aguarde o PyCharm terminar de criar o ambiente virtual (uma pasta `.venv` vai aparecer no projeto).
 
-### 3. Instalar o Pygame
+### 3. Instalar as dependências
 
 1. Abra o terminal integrado do PyCharm: menu **View > Tool Windows > Terminal** (ou o atalho
    `Alt+F12`).
@@ -54,13 +67,14 @@ ainda não tiver, instale antes de continuar:
    virtual está ativo.
 3. Digite o comando abaixo e pressione Enter:
    ```
-   pip install pygame
+   pip install -r requirements.txt
    ```
 
 ### 4. Executar o projeto
 
-1. Na árvore de arquivos à esquerda, clique duas vezes em `test-2.1.py` para abri-lo.
-2. Clique com o botão direito em qualquer lugar do código e escolha **Run 'test-2.1'**.
+1. Na árvore de arquivos à esquerda, clique duas vezes em `test-2.1.py` (ou `test-2.3.py`) para
+   abri-lo.
+2. Clique com o botão direito em qualquer lugar do código e escolha **Run**.
    - Alternativamente, clique no ícone de seta verde ▶️ no canto superior direito da janela, ou ao
      lado do número da linha onde está `Test().run()`.
 3. Uma janela chamada "Graphics Window" deve abrir na tela.
@@ -68,9 +82,9 @@ ainda não tiver, instale antes de continuar:
 
 ### Problemas comuns
 
-- **"ModuleNotFoundError: No module named 'pygame'"** — o interpretador selecionado no PyCharm não é
-  o `.venv` do projeto, ou o `pip install pygame` não foi executado nesse ambiente. Repita o passo 2
-  e 3 conferindo se o terminal mostra `(.venv)`.
+- **"ModuleNotFoundError: No module named 'pygame'" (ou `numpy`, `OpenGL`)** — o interpretador
+  selecionado no PyCharm não é o `.venv` do projeto, ou o `pip install -r requirements.txt` não foi
+  executado nesse ambiente. Repita o passo 2 e 3 conferindo se o terminal mostra `(.venv)`.
 - **A janela não abre ou parece travada** — confira se não há nenhuma outra janela do programa já
   aberta por trás; feche todas e rode de novo. Se estiver usando um notebook/desktop com placa de
   vídeo dedicada, confirme que os drivers de vídeo estão atualizados.
