@@ -21,13 +21,13 @@ Dicas:
 - Os nomes dos dois integrantes.
 - Um parágrafo explicando por que a órbita usa `R @ T` e a rotação própria fica à direita da translação.
 
-## Critérios (10 pontos)
+## Critérios ( 1 ponto)
 | Critério | Pontos |
 |---|---:|
-| Sol girando no próprio centro | 1 |
-| Planeta orbitando o sol | 2 |
-| Rotação própria do planeta, independente da órbita | 2 |
-| Lua orbitando o planeta (hierarquia) | 2 |
-| Controle de velocidade pelo teclado, sem valor negativo | 1 |
-| Explicação da ordem das matrizes | 1 |
-| Código executável e entrega completa | 1 |
+| Sol girando no próprio centro 
+| Planeta orbitando o sol 
+| Rotação própria do planeta, independente da órbita 
+| Lua orbitando o planeta (hierarquia) 
+| Controle de velocidade pelo teclado, sem valor negativo 
+| Explicação da ordem das matrizes 
+| Código executável e entrega completa 
