@@ -1,32 +1,65 @@
-# janelaPygame
+# Computação Gráfica com Python e OpenGL
 
-Este projeto foi desenvolvido para a disciplina de **Computação Gráfica** do **Unipac - Barbacena**,
-ministrada pelo **Prof. Rodrigo Fernandes dos Santos**.
+Repositório da disciplina de **Computação Gráfica** do **Unipac Barbacena**, ministrada pelo
+**Prof. Rodrigo Fernandes dos Santos**.
 
-## Sobre o projeto
+O projeto constrói, passo a passo, um pequeno framework gráfico com **Pygame**, **PyOpenGL** e
+**NumPy**, seguindo o livro *Developing Graphics Frameworks with Python and OpenGL* (Stemkoski e
+Pascale, CRC Press, 2022). Ele reúne os checkpoints feitos em sala e as aulas completas, cada uma
+com slides, demonstrações e uma atividade em dupla.
 
-Trata-se de um esqueleto de aplicação gráfica usando **Pygame** e **OpenGL**, com uma janela
-duplamente bufferizada (double buffer) e suavização de bordas (antialiasing). O projeto fornece uma
-estrutura básica reaproveitada pelos exercícios/checkpoints da disciplina:
+## Aulas
 
-- `core/base.py` e `core/input.py` — janela, loop principal e tratamento de eventos.
-- `core/openGLUtils.py` — compilação e link de shaders.
-- `core/attribute.py` — envia dados de vértice (posição, cor, etc.) para buffers da GPU.
-- `core/uniform.py` — envia variáveis uniform (globais) para o programa de shader.
+Siga as aulas nesta ordem. Cada pasta `alunos/` é independente: tem o próprio framework, os
+exemplos, o enunciado da atividade e as instruções de instalação.
 
-Exercícios/checkpoints:
+| # | Aula | Capítulo do livro | Atividade |
+|---|---|---|---|
+| 1 | [Transformações geométricas](Aula_Transformacoes/alunos/README.md) | 3: matrizes, composição, global x local, projeção | Mini sistema solar |
+| 2 | [Grafo de cena](Aula_GrafoCena/alunos/README.md) | 4: Object3D, Mesh, Camera, Renderer, pivôs | Braço robótico |
+| 3 | [Texturas](Aula_Texturas/alunos/README.md) | 5: Texture, UV, TextureMaterial | Cubo com satélite texturizado |
 
-- `test-2.1.py` — janela básica.
-- `test-2.3.py` — desenha um hexágono usando `Attribute` e `GL_LINE_LOOP`.
+Os slides de cada aula estão na pasta correspondente (`Aula_*/*.pptx`).
+
+**Exercícios:** veja [EXERCICIOS.md](EXERCICIOS.md) para a lista das atividades, como entregar e
+os critérios de avaliação.
+
+## Estrutura do repositório
+
+```
+├── core/                      framework dos checkpoints iniciais
+├── test-2.1.py ... test-3.py  checkpoints feitos em sala
+├── Exercicio.py               exercício: retângulo animado com uniforms
+├── Aula_Transformacoes/
+│   └── alunos/                demos 1 a 3 + atividade_sistema_solar.py
+├── Aula_GrafoCena/
+│   └── alunos/                demos 1 a 3 + atividade_braco.py
+├── Aula_Texturas/
+│   └── alunos/                exemplos do retângulo e do cubo + atividade_cubo.py
+├── EXERCICIOS.md              enunciados resumidos das atividades
+└── requirements.txt
+```
+
+## Checkpoints da raiz
+
+| Arquivo | Conteúdo |
+|---|---|
+| `test-2.1.py` | Janela básica com Pygame e OpenGL |
+| `test-2.3.py` | Hexágono com `Attribute` e `GL_LINE_LOOP` |
+| `test-2-6.py`, `test-2-7.py` | Translação de triângulos com uniforms |
+| `test-2-9.py` | Triângulo com cor animada (uniform `baseColor`) |
+| `test-3.py` | Transformações globais e locais com matrizes (teclado) |
+| `Exercicio.py` | Retângulo de dois triângulos atravessando a tela |
+
+O `test-3.py` usa uniforms do tipo `mat4`. Para executá-lo, use as classes da aula de
+Transformações (`Aula_Transformacoes/alunos/core`), que já trazem esse suporte, ou rode a
+`demo3_global_local.py` daquela aula, que é a versão comentada do mesmo exemplo.
 
 ## Requisitos
 
-- Python 3.13
-- Pygame 2.6.1
-- PyOpenGL 4.0.0a1
-- numpy
-
-Todas as dependências estão listadas em `requirements.txt`.
+- Python 3.11 a 3.13
+- Pygame 2.6.1, PyOpenGL 3.1.10 e NumPy (veja `requirements.txt`)
+- Placa de vídeo com OpenGL 3.2 core ou superior
 
 ## Passo a passo: clonando e executando no PyCharm
 
@@ -72,8 +105,8 @@ ainda não tiver, instale antes de continuar:
 
 ### 4. Executar o projeto
 
-1. Na árvore de arquivos à esquerda, clique duas vezes em `test-2.1.py` (ou `test-2.3.py`) para
-   abri-lo.
+1. Na árvore de arquivos à esquerda, clique duas vezes em `test-2.1.py` (ou em qualquer outro
+   exemplo) para abri-lo.
 2. Clique com o botão direito em qualquer lugar do código e escolha **Run**.
    - Alternativamente, clique no ícone de seta verde ▶️ no canto superior direito da janela, ou ao
      lado do número da linha onde está `Test().run()`.
