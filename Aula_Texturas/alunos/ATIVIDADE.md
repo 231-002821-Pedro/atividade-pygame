@@ -19,13 +19,13 @@ Dicas:
 - Os nomes dos dois integrantes.
 - Um parágrafo explicando o papel das coordenadas UV e o efeito de `repeatUV = [2,2]`.
 
-## Critérios (10 pontos)
+## Critérios (e pontos)
 | Critério | Pontos |
 |---|---:|
-| Textura `mosaico.png` no cubo principal, sem inversão | 2 |
-| Satélite com `grade_uv.png` repetida 2x2 | 2 |
-| Satélite filho do cubo, na distância correta e acompanhando a rotação | 2 |
-| Velocidade controlada pelo teclado, com `deltaTime` | 1 |
-| Rotação própria do satélite | 1 |
-| Explicação de UV e `repeatUV` | 1 |
-| Código executável e entrega completa | 1 |
+| Textura `mosaico.png` no cubo principal, sem inversão 
+| Satélite com `grade_uv.png` repetida 2x2 
+| Satélite filho do cubo, na distância correta e acompanhando a rotação 
+| Velocidade controlada pelo teclado, com `deltaTime` 
+| Rotação própria do satélite 
+| Explicação de UV e `repeatUV` 
+| Código executável e entrega completa 
