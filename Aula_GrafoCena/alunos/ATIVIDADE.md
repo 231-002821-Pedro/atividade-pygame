@@ -23,13 +23,13 @@ Dicas:
 - Os nomes dos dois integrantes.
 - Um parágrafo explicando por que foi preciso usar pivôs (`Object3D`) em vez de girar as caixas diretamente.
 
-## Critérios (10 pontos)
+## Critérios (1 ponto)
 | Critério | Pontos |
 |---|---:|
-| Ombro como pivô e braço preso pela ponta | 2 |
-| Cotovelo como pivô e antebraço preso pela ponta | 2 |
-| Garra na ponta do antebraço | 1 |
-| Base gira com A/D, levando o braço junto | 1 |
-| Ombro e cotovelo giram com W/S e I/K | 2 |
-| Explicação dos pivôs | 1 |
-| Código executável e entrega completa | 1 |
+| Ombro como pivô e braço preso pela ponta
+| Cotovelo como pivô e antebraço preso pela ponta 
+| Garra na ponta do antebraço 
+| Base gira com A/D, levando o braço junto 
+| Ombro e cotovelo giram com W/S e I/K 
+| Explicação dos pivôs 
+| Código executável e entrega completa 
